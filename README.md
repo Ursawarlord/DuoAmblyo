@@ -1,1 +1,1 @@
-# DuoAmblyo
+# DuoCycle
