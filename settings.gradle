@@ -1,2 +1,1 @@
-include ':app'
-rootProject.name = "Duo Amblyo"
+include ':app', ':main_app_template'

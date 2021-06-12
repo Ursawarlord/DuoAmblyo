@@ -25,7 +25,7 @@
                 <key>Application Name</key>
                 <dict>
                     <key>value</key>
-                    <string>MOTOBIKE Game</string>
+                    <string>DUOCYCLE Game</string>
                 </dict>
                 <key>Comments</key>
                 <dict>
@@ -227,7 +227,7 @@
                         <key>bundleID</key>
                         <string>bike.game.motor</string>
                         <key>nameOnDevice</key>
-                        <string>MotoBike</string>
+                        <string>DUOCYCLE</string>
                         <key>shareMessageTemplate</key>
                         <string></string>
                         <key>reviewLink</key>
