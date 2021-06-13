@@ -1,7 +1,6 @@
 # DuoCycle
 ### Proiect MDS 2021
 ---
-
 ## User Stories
 1. Ca utilizator avansat, mi-aș dori să încerc un joc realist care îmi dezvoltă gândirea peste noi perspective
 2. Ca utilizator începător, mi-aș dori să încerc un joc simplu care îmi dezvolta reflexele ce pot fi folositoare și în viața reală
@@ -19,3 +18,7 @@
 ## Informatii tehnice joc:
 
 ` Android 8 sau mai nou: Android SDK 26 `
+
+**Cocos2dx library**: `Accelerometer, Activity, Bitmap, EditBoxDialog, EditText, ETCLoader, GLSurFaceView, Handler, Helper, LocalStorage, Music, Renderer, Sound, TextInputWraper, Typefaces `
+
+` JNI 1.4 & JDK 8 `
