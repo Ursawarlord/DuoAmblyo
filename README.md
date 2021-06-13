@@ -22,3 +22,5 @@
 **Cocos2dx library**: `Accelerometer, Activity, Bitmap, EditBoxDialog, EditText, ETCLoader, GLSurFaceView, Handler, Helper, LocalStorage, Music, Renderer, Sound, TextInputWraper, Typefaces `
 
 ` JNI 1.4 & JDK 8 `
+
+![image](https://user-images.githubusercontent.com/19687103/121817176-66f6c900-cc88-11eb-86ad-2d83264c13f4.png)
