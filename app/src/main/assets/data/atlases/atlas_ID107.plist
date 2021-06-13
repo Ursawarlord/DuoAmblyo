@@ -62,11 +62,11 @@
                 <key>frame</key>
                 <string>{{1412, 402}, {209, 202}}</string>
                 <key>offset</key>
-                <string>{-98, 64}</string>
+                <string>{-200, 0}</string>
                 <key>rotated</key>
                 <string>false</string>
                 <key>sourceColorRect</key>
-                <string>{{366, 155}, {209, 202}}</string>
+                <string>{{-200,0}, {209, 202}}</string>
                 <key>sourceSize</key>
                 <string>{1136, 640}</string>
             </dict>
@@ -307,15 +307,15 @@
             <key>PTModelSprite_ID10024</key>
             <dict>
                 <key>frame</key>
-                <string>{{1004, 1386}, {554, 146}}</string>
+                <string>{{1266, 1532}, {282, 200}}</string>
                 <key>offset</key>
-                <string>{-5, -78}</string>
+                <string>{0, 0}</string>
                 <key>rotated</key>
                 <string>false</string>
                 <key>sourceColorRect</key>
-                <string>{{286, 325}, {554, 146}}</string>
+                <string>{{0,0}, {282, 200}}</string>
                 <key>sourceSize</key>
-                <string>{1136, 640}</string>
+                <string>{282, 200}</string>
             </dict>
             <key>PTModelSprite_ID3669</key>
             <dict>

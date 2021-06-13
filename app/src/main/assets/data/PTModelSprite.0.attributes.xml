@@ -952,7 +952,7 @@
             </dict>
             <dict>
                 <key>id</key>
-                <string>10024</string>
+                <string>0010024020</string>
                 <key>className</key>
                 <string>PTModelSprite</string>
                 <key>Name</key>
@@ -971,6 +971,24 @@
                 <key>sourceRect</key>
                 <string>{{286.00,325.00},{554.00,146.00}}</string>
             </dict>
+            <dict>
+                <key>id</key>
+                <string>10024</string>
+                <key>className</key>
+                <string>PTModelSprite</string>
+                <key>Name</key>
+                <dict>
+                    <key>value</key>
+                    <string>logo</string>
+                </dict>
+                <key>pos</key>
+                <string>{1266.00,1532.00}</string>
+                <key>offset</key>
+                <string>{0.00,0.00}</string>
+                <key>size</key>
+                <string>{250.00,210.00}</string>
+            </dict>
+
             <dict>
                 <key>id</key>
                 <string>10035</string>
