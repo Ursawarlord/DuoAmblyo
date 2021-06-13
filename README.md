@@ -25,14 +25,9 @@
 
 ![image](https://user-images.githubusercontent.com/19687103/121817176-66f6c900-cc88-11eb-86ad-2d83264c13f4.png)
 
-## Design patterns
+## UML
 
-`
-public class Cocos2dxAccelerometer implements SensorEventListener{ ... }
-public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelperListener {
-public class Cocos2dxBitmap {
-public class Cocos2dxEditBoxDialog extends Dialog {
-`
+![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml.png)
 
 ## Automated tests
 
