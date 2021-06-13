@@ -27,7 +27,7 @@
 
 ## UML
 
-[!image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml.png)
+![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml.png)
 
 ## Automated tests
 
