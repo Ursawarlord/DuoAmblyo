@@ -1,0 +1,282 @@
+@startuml
+
+title __DUOCYCLE.APP's Class Diagram__\n
+
+  namespace com.android.vending.billing {
+    interface com.android.vending.billing.IInAppBillingService {
+    }
+  }
+  
+
+  namespace com.duocycle {
+    class com.duocycle.BuildConfig {
+    }
+  }
+  
+
+  namespace com.game {
+    class com.game.PTPlayer {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdAdMobBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdAppLovinBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdChartboostBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdFacebookBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdHeyzapBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdInMobiBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdLeadBoltBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.ads {
+    class com.secrethq.ads.PTAdRevMobBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    class com.secrethq.store.PTStoreBridge {
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.Base64 {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.Base64DecoderException {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.IabException {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.IabHelper {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.IabResult {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.Inventory {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.Purchase {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.Security {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.store {
+    namespace util {
+      class com.secrethq.store.util.SkuDetails {
+      }
+    }
+  }
+  
+
+  namespace com.secrethq.utils {
+    class com.secrethq.utils.PTJniHelper {
+    }
+  }
+  
+
+  namespace com.secrethq.utils {
+    class com.secrethq.utils.PTServicesBridge {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxAccelerometer {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    abstract class org.cocos2dx.lib.Cocos2dxActivity {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxBitmap {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxETCLoader {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxEditBoxDialog {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxEditText {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxGLSurfaceView {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxHandler {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxHelper {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxLocalStorage {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxMusic {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxRenderer {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxSound {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxTextInputWraper {
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxTypefaces {
+    }
+  }
+  
+
+  com.game.PTPlayer -up-|> org.cocos2dx.lib.Cocos2dxActivity
+  com.secrethq.store.util.IabException o-- com.secrethq.store.util.IabResult : mResult
+  com.secrethq.store.util.IabHelper o-- com.secrethq.store.util.IabHelper.OnIabPurchaseFinishedListener : mPurchaseListener
+  com.secrethq.store.util.IabHelper o-- com.android.vending.billing.IInAppBillingService : mService
+  com.secrethq.utils.PTServicesBridge .up.|> com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks
+  com.secrethq.utils.PTServicesBridge .up.|> com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
+  org.cocos2dx.lib.Cocos2dxAccelerometer .up.|> android.hardware.SensorEventListener
+  org.cocos2dx.lib.Cocos2dxActivity .up.|> org.cocos2dx.lib.Cocos2dxHelper.Cocos2dxHelperListener
+  org.cocos2dx.lib.Cocos2dxActivity -up-|> android.app.Activity
+  org.cocos2dx.lib.Cocos2dxActivity o-- org.cocos2dx.lib.Cocos2dxGLSurfaceView : mGLSurfaceView
+  org.cocos2dx.lib.Cocos2dxActivity o-- org.cocos2dx.lib.Cocos2dxHandler : mHandler
+  org.cocos2dx.lib.Cocos2dxEditBoxDialog -up-|> android.app.Dialog
+  org.cocos2dx.lib.Cocos2dxEditText -up-|> android.widget.EditText
+  org.cocos2dx.lib.Cocos2dxEditText o-- org.cocos2dx.lib.Cocos2dxGLSurfaceView : mCocos2dxGLSurfaceView
+  org.cocos2dx.lib.Cocos2dxGLSurfaceView -up-|> android.opengl.GLSurfaceView
+  org.cocos2dx.lib.Cocos2dxGLSurfaceView o-- org.cocos2dx.lib.Cocos2dxEditText : mCocos2dxEditText
+  org.cocos2dx.lib.Cocos2dxGLSurfaceView o-- org.cocos2dx.lib.Cocos2dxRenderer : mCocos2dxRenderer
+  org.cocos2dx.lib.Cocos2dxHandler -up-|> android.os.Handler
+  org.cocos2dx.lib.Cocos2dxRenderer .up.|> android.opengl.GLSurfaceView.Renderer
+  org.cocos2dx.lib.Cocos2dxTextInputWraper .up.|> android.text.TextWatcher
+  org.cocos2dx.lib.Cocos2dxTextInputWraper .up.|> android.widget.TextView.OnEditorActionListener
+  org.cocos2dx.lib.Cocos2dxTextInputWraper o-- org.cocos2dx.lib.Cocos2dxGLSurfaceView : mCocos2dxGLSurfaceView
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

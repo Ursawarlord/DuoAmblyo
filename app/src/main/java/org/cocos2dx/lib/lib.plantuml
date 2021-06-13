@@ -1,0 +1,501 @@
+@startuml
+
+title __LIB's Class Diagram__\n
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxAccelerometer {
+        {static} - TAG : String
+        - mAccelerometer : Sensor
+        - mContext : Context
+        - mNaturalOrientation : int
+        - mSensorManager : SensorManager
+        + Cocos2dxAccelerometer()
+        + disable()
+        + enable()
+        + onAccuracyChanged()
+        + onSensorChanged()
+        {static} + onSensorChanged()
+        + setInterval()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    abstract class org.cocos2dx.lib.Cocos2dxActivity {
+        {static} - TAG : String
+        {static} - sContext : Context
+        {static} + getContext()
+        + init()
+        + onCreateView()
+        + runOnGLThread()
+        + showDialog()
+        + showEditTextDialog()
+        # onCreate()
+        # onPause()
+        # onResume()
+        {static} - isAndroidEmulator()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxBitmap {
+        {static} - HORIZONTALALIGN_CENTER : int
+        {static} - HORIZONTALALIGN_LEFT : int
+        {static} - HORIZONTALALIGN_RIGHT : int
+        {static} - VERTICALALIGN_BOTTOM : int
+        {static} - VERTICALALIGN_CENTER : int
+        {static} - VERTICALALIGN_TOP : int
+        {static} - sContext : Context
+        {static} + createTextBitmap()
+        {static} + createTextBitmapShadowStroke()
+        {static} + setContext()
+        {static} - computeTextProperty()
+        {static} - computeX()
+        {static} - computeY()
+        {static} - divideStringWithMaxWidth()
+        {static} - getFontSizeAccordingHeight()
+        {static} - getPixels()
+        {static} - getStringWithEllipsis()
+        {static} - initNativeObject()
+        {static} - nativeInitBitmapDC()
+        {static} - newPaint()
+        {static} - refactorString()
+        {static} - splitString()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxBitmap.TextProperty {
+        - mHeightPerLine : int
+        - mLines : String[]
+        - mMaxWidth : int
+        - mTotalHeight : int
+        ~ TextProperty()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxETCLoader {
+        {static} - ASSETS_PATH : String
+        {static} - context : Context
+        {static} + loadTexture()
+        {static} + setContext()
+        {static} - nativeSetTextureInfo()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxEditBoxDialog {
+        - kEditBoxInputFlagInitialCapsAllCharacters : int
+        - kEditBoxInputFlagInitialCapsSentence : int
+        - kEditBoxInputFlagInitialCapsWord : int
+        - kEditBoxInputFlagPassword : int
+        - kEditBoxInputFlagSensitive : int
+        - kEditBoxInputModeAny : int
+        - kEditBoxInputModeDecimal : int
+        - kEditBoxInputModeEmailAddr : int
+        - kEditBoxInputModeNumeric : int
+        - kEditBoxInputModePhoneNumber : int
+        - kEditBoxInputModeSingleLine : int
+        - kEditBoxInputModeUrl : int
+        - kKeyboardReturnTypeDefault : int
+        - kKeyboardReturnTypeDone : int
+        - kKeyboardReturnTypeGo : int
+        - kKeyboardReturnTypeSearch : int
+        - kKeyboardReturnTypeSend : int
+        - mInputEditText : EditText
+        - mInputFlag : int
+        - mInputFlagConstraints : int
+        - mInputMode : int
+        - mInputModeContraints : int
+        - mIsMultiline : boolean
+        - mMaxLength : int
+        - mMessage : String
+        - mReturnType : int
+        - mTextViewTitle : TextView
+        - mTitle : String
+        + Cocos2dxEditBoxDialog()
+        # onCreate()
+        - closeKeyboard()
+        - convertDipsToPixels()
+        - openKeyboard()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxEditText {
+        + Cocos2dxEditText()
+        + Cocos2dxEditText()
+        + Cocos2dxEditText()
+        + onKeyDown()
+        + setCocos2dxGLSurfaceView()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxGLSurfaceView {
+        {static} - HANDLER_CLOSE_IME_KEYBOARD : int
+        {static} - HANDLER_OPEN_IME_KEYBOARD : int
+        {static} - TAG : String
+        {static} - mCocos2dxGLSurfaceView : Cocos2dxGLSurfaceView
+        {static} - sCocos2dxTextInputWraper : Cocos2dxTextInputWraper
+        {static} - sHandler : Handler
+        + Cocos2dxGLSurfaceView()
+        + Cocos2dxGLSurfaceView()
+        {static} + closeIMEKeyboard()
+        + deleteBackward()
+        + getCocos2dxEditText()
+        {static} + getInstance()
+        + insertText()
+        + onKeyDown()
+        + onKeyUp()
+        + onPause()
+        + onResume()
+        + onTouchEvent()
+        {static} + openIMEKeyboard()
+        {static} + queueAccelerometer()
+        + setCocos2dxEditText()
+        + setCocos2dxRenderer()
+        # initView()
+        # onSizeChanged()
+        {static} - dumpMotionEvent()
+        - getContentText()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxHandler {
+        {static} + HANDLER_SHOW_DIALOG : int
+        {static} + HANDLER_SHOW_EDITBOX_DIALOG : int
+        - mActivity : WeakReference<Cocos2dxActivity>
+        + Cocos2dxHandler()
+        + handleMessage()
+        - showDialog()
+        - showEditBoxDialog()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxHandler.DialogMessage {
+        + message : String
+        + titile : String
+        + DialogMessage()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxHandler.EditBoxMessage {
+        + content : String
+        + inputFlag : int
+        + inputMode : int
+        + maxLength : int
+        + returnType : int
+        + title : String
+        + EditBoxMessage()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxHelper {
+        {static} - PREFS_NAME : String
+        {static} - sAccelerometerEnabled : boolean
+        {static} - sAssetManager : AssetManager
+        {static} - sCocos2dMusic : Cocos2dxMusic
+        {static} - sCocos2dSound : Cocos2dxSound
+        {static} - sCocos2dxAccelerometer : Cocos2dxAccelerometer
+        {static} - sCocos2dxHelperListener : Cocos2dxHelperListener
+        {static} - sContext : Context
+        {static} - sFileDirectory : String
+        {static} - sPackageName : String
+        {static} + disableAccelerometer()
+        {static} + enableAccelerometer()
+        {static} + end()
+        {static} + getAssetManager()
+        {static} + getBackgroundMusicVolume()
+        {static} + getBoolForKey()
+        {static} + getCocos2dxPackageName()
+        {static} + getCocos2dxWritablePath()
+        {static} + getCurrentLanguage()
+        {static} + getDPI()
+        {static} + getDeviceModel()
+        {static} + getDoubleForKey()
+        {static} + getEffectsVolume()
+        {static} + getFloatForKey()
+        {static} + getIntegerForKey()
+        {static} + getStringForKey()
+        {static} + init()
+        {static} + isBackgroundMusicPlaying()
+        {static} + onNativeInitStatic()
+        {static} + onPause()
+        {static} + onResume()
+        {static} + pauseAllEffects()
+        {static} + pauseBackgroundMusic()
+        {static} + pauseEffect()
+        {static} + playBackgroundMusic()
+        {static} + playEffect()
+        {static} + preloadBackgroundMusic()
+        {static} + preloadEffect()
+        {static} + resumeAllEffects()
+        {static} + resumeBackgroundMusic()
+        {static} + resumeEffect()
+        {static} + rewindBackgroundMusic()
+        {static} + setAccelerometerInterval()
+        {static} + setBackgroundMusicVolume()
+        {static} + setBoolForKey()
+        {static} + setDoubleForKey()
+        {static} + setEditTextDialogResult()
+        {static} + setEffectsVolume()
+        {static} + setFloatForKey()
+        {static} + setIntegerForKey()
+        {static} + setStringForKey()
+        {static} + stopAllEffects()
+        {static} + stopBackgroundMusic()
+        {static} + stopEffect()
+        {static} + terminateProcess()
+        {static} + unloadEffect()
+        {static} - nativeSetApkPath()
+        {static} - nativeSetContext()
+        {static} - nativeSetEditTextDialogResult()
+        {static} - showDialog()
+        {static} - showEditTextDialog()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    interface org.cocos2dx.lib.Cocos2dxHelper.Cocos2dxHelperListener {
+        {abstract} + onNativeInit()
+        {abstract} + runOnGLThread()
+        {abstract} + showDialog()
+        {abstract} + showEditTextDialog()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxLocalStorage {
+        {static} - DATABASE_NAME : String
+        {static} - DATABASE_VERSION : int
+        {static} - TABLE_NAME : String
+        {static} - TAG : String
+        {static} - mDatabase : SQLiteDatabase
+        {static} - mDatabaseOpenHelper : DBOpenHelper
+        {static} + destory()
+        {static} + getItem()
+        {static} + init()
+        {static} + removeItem()
+        {static} + setItem()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxLocalStorage.DBOpenHelper {
+        + onCreate()
+        + onUpgrade()
+        ~ DBOpenHelper()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxMusic {
+        {static} - TAG : String
+        - mBackgroundMediaPlayer : MediaPlayer
+        - mContext : Context
+        - mCurrentPath : String
+        - mIsLoop : boolean
+        - mLeftVolume : float
+        - mManualPaused : boolean
+        - mPaused : boolean
+        - mRightVolume : float
+        + Cocos2dxMusic()
+        + end()
+        + getBackgroundVolume()
+        + isBackgroundMusicPlaying()
+        + onEnterBackground()
+        + onEnterForeground()
+        + pauseBackgroundMusic()
+        + playBackgroundMusic()
+        + preloadBackgroundMusic()
+        + resumeBackgroundMusic()
+        + rewindBackgroundMusic()
+        + setBackgroundVolume()
+        + stopBackgroundMusic()
+        - createMediaplayer()
+        - initData()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxRenderer {
+        {static} - NANOSECONDSPERMICROSECOND : long
+        {static} - NANOSECONDSPERSECOND : long
+        - mLastTickInNanoSeconds : long
+        - mScreenHeight : int
+        - mScreenWidth : int
+        {static} - sAnimationInterval : long
+        + getContentText()
+        + handleActionCancel()
+        + handleActionDown()
+        + handleActionMove()
+        + handleActionUp()
+        + handleDeleteBackward()
+        + handleInsertText()
+        + handleKeyDown()
+        + handleKeyUp()
+        + handleOnPause()
+        + handleOnResume()
+        + onDrawFrame()
+        + onSurfaceChanged()
+        + onSurfaceCreated()
+        {static} + setAnimationInterval()
+        + setScreenWidthAndHeight()
+        {static} - nativeDeleteBackward()
+        {static} - nativeGetContentText()
+        {static} - nativeInit()
+        {static} - nativeInsertText()
+        {static} - nativeKeyDown()
+        {static} - nativeKeyUp()
+        {static} - nativeOnPause()
+        {static} - nativeOnResume()
+        {static} - nativeRender()
+        {static} - nativeTouchesBegin()
+        {static} - nativeTouchesCancel()
+        {static} - nativeTouchesEnd()
+        {static} - nativeTouchesMove()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxSound {
+        {static} - INVALID_SOUND_ID : int
+        {static} - INVALID_STREAM_ID : int
+        {static} - LOAD_TIME_OUT : int
+        {static} - MAX_SIMULTANEOUS_STREAMS_DEFAULT : int
+        {static} - MAX_SIMULTANEOUS_STREAMS_I9100 : int
+        {static} - SOUND_PRIORITY : int
+        {static} - SOUND_QUALITY : int
+        {static} - SOUND_RATE : float
+        {static} - TAG : String
+        - mContext : Context
+        - mLeftVolume : float
+        - mPathSoundIDMap : HashMap<String, Integer>
+        - mPathStreamIDsMap : HashMap<String, ArrayList<Integer>>
+        - mPlayWhenLoadedEffects : ConcurrentHashMap<Integer, SoundInfoForLoadedCompleted>
+        - mRightVolume : float
+        - mSoundPool : SoundPool
+        + Cocos2dxSound()
+        + createSoundIDFromAsset()
+        + end()
+        + getEffectsVolume()
+        + onEnterBackground()
+        + onEnterForeground()
+        + pauseAllEffects()
+        + pauseEffect()
+        + playEffect()
+        + preloadEffect()
+        + resumeAllEffects()
+        + resumeEffect()
+        + setEffectsVolume()
+        + stopAllEffects()
+        + stopEffect()
+        + unloadEffect()
+        - clamp()
+        - doPlayEffect()
+        - initData()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxSound.OnLoadCompletedListener {
+        + onLoadComplete()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxSound.SoundInfoForLoadedCompleted {
+        + effectID : int
+        + gain : float
+        + isLoop : boolean
+        + pan : float
+        + path : String
+        + pitch : float
+        + SoundInfoForLoadedCompleted()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxTextInputWraper {
+        {static} - TAG : String
+        - mOriginText : String
+        - mText : String
+        + Cocos2dxTextInputWraper()
+        + afterTextChanged()
+        + beforeTextChanged()
+        + onEditorAction()
+        + onTextChanged()
+        + setOriginText()
+        - isFullScreenEdit()
+    }
+  }
+  
+
+  namespace org.cocos2dx.lib {
+    class org.cocos2dx.lib.Cocos2dxTypefaces {
+        {static} - sTypefaceCache : HashMap<String, Typeface>
+        {static} + get()
+    }
+  }
+  
+
+  org.cocos2dx.lib.Cocos2dxAccelerometer .up.|> android.hardware.SensorEventListener
+  org.cocos2dx.lib.Cocos2dxActivity .up.|> org.cocos2dx.lib.Cocos2dxHelper.Cocos2dxHelperListener
+  org.cocos2dx.lib.Cocos2dxActivity -up-|> android.app.Activity
+  org.cocos2dx.lib.Cocos2dxActivity o-- org.cocos2dx.lib.Cocos2dxGLSurfaceView : mGLSurfaceView
+  org.cocos2dx.lib.Cocos2dxActivity o-- org.cocos2dx.lib.Cocos2dxHandler : mHandler
+  org.cocos2dx.lib.Cocos2dxBitmap +-down- org.cocos2dx.lib.Cocos2dxBitmap.TextProperty
+  org.cocos2dx.lib.Cocos2dxEditBoxDialog -up-|> android.app.Dialog
+  org.cocos2dx.lib.Cocos2dxEditText -up-|> android.widget.EditText
+  org.cocos2dx.lib.Cocos2dxEditText o-- org.cocos2dx.lib.Cocos2dxGLSurfaceView : mCocos2dxGLSurfaceView
+  org.cocos2dx.lib.Cocos2dxGLSurfaceView -up-|> android.opengl.GLSurfaceView
+  org.cocos2dx.lib.Cocos2dxGLSurfaceView o-- org.cocos2dx.lib.Cocos2dxEditText : mCocos2dxEditText
+  org.cocos2dx.lib.Cocos2dxGLSurfaceView o-- org.cocos2dx.lib.Cocos2dxRenderer : mCocos2dxRenderer
+  org.cocos2dx.lib.Cocos2dxHandler -up-|> android.os.Handler
+  org.cocos2dx.lib.Cocos2dxHandler +-down- org.cocos2dx.lib.Cocos2dxHandler.DialogMessage
+  org.cocos2dx.lib.Cocos2dxHandler +-down- org.cocos2dx.lib.Cocos2dxHandler.EditBoxMessage
+  org.cocos2dx.lib.Cocos2dxHelper +-down- org.cocos2dx.lib.Cocos2dxHelper.Cocos2dxHelperListener
+  org.cocos2dx.lib.Cocos2dxLocalStorage +-down- org.cocos2dx.lib.Cocos2dxLocalStorage.DBOpenHelper
+  org.cocos2dx.lib.Cocos2dxLocalStorage.DBOpenHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  org.cocos2dx.lib.Cocos2dxRenderer .up.|> android.opengl.GLSurfaceView.Renderer
+  org.cocos2dx.lib.Cocos2dxSound +-down- org.cocos2dx.lib.Cocos2dxSound.OnLoadCompletedListener
+  org.cocos2dx.lib.Cocos2dxSound +-down- org.cocos2dx.lib.Cocos2dxSound.SoundInfoForLoadedCompleted
+  org.cocos2dx.lib.Cocos2dxSound.OnLoadCompletedListener .up.|> android.media.SoundPool.OnLoadCompleteListener
+  org.cocos2dx.lib.Cocos2dxTextInputWraper .up.|> android.text.TextWatcher
+  org.cocos2dx.lib.Cocos2dxTextInputWraper .up.|> android.widget.TextView.OnEditorActionListener
+  org.cocos2dx.lib.Cocos2dxTextInputWraper o-- org.cocos2dx.lib.Cocos2dxGLSurfaceView : mCocos2dxGLSurfaceView
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
