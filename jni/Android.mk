@@ -10,7 +10,7 @@ LOCAL_SRC_FILES := main.cpp
 
 LOCAL_WHOLE_STATIC_LIBRARIES :=  core_static cocos2dx_static box2d_static
 
-GOOGLE_PLAY_STORE := true
+GOOGLE_PLAY_STORE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
