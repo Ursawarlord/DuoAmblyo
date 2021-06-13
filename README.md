@@ -24,3 +24,16 @@
 ` JNI 1.4 & JDK 8 `
 
 ![image](https://user-images.githubusercontent.com/19687103/121817176-66f6c900-cc88-11eb-86ad-2d83264c13f4.png)
+
+## Design patterns
+
+`
+public class Cocos2dxAccelerometer implements SensorEventListener{ ... }
+public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelperListener {
+public class Cocos2dxBitmap {
+public class Cocos2dxEditBoxDialog extends Dialog {
+`
+
+## Automated tests
+
+**Continuous integration workflows**: verifică dacă proiectul Android se construiește cu succes cu gradle 4.1 la fiecare commit
