@@ -29,6 +29,8 @@
 
 ![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml_2.png)
 
+Diagrama a fost generata in Android Studio cu plug-inul Code Iris
+
 ## Automated tests
 
 **Continuous integration workflows**: verifică dacă proiectul Android se construiește cu succes cu gradle 4.1 la fiecare commit
