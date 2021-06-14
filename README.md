@@ -29,7 +29,7 @@
 
 ## UML
 
-![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml_2.png)
+![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml_3.png)
 
 Diagrama a fost generata in Android Studio cu plug-inul Code Iris
 
