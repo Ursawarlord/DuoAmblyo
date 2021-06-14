@@ -15,7 +15,7 @@ import com.duocycle.R;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
-public class PTPlayer extends Cocos2dxActivity {
+public class Duocycle extends Cocos2dxActivity {
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);

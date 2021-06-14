@@ -2763,7 +2763,7 @@
                 <key>Text</key>
                 <dict>
                     <key>value</key>
-                    <string>Game made By</string>
+                    <string></string>
                 </dict>
                 <key>Font</key>
                 <dict>
@@ -2859,7 +2859,7 @@
                 <key>Text</key>
                 <dict>
                     <key>value</key>
-                    <string>Using:</string>
+                    <string></string>
                 </dict>
                 <key>Font</key>
                 <dict>
