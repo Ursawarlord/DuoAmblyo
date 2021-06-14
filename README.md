@@ -1,6 +1,8 @@
 # DuoCycle
 ### Proiect MDS 2021
 ---
+## prezentare demo: https://youtu.be/C2Ol6Qb_3AM 
+
 ## User Stories
 1. Ca utilizator avansat, mi-aș dori să încerc un joc realist care îmi dezvoltă gândirea peste noi perspective
 2. Ca utilizator începător, mi-aș dori să încerc un joc simplu care îmi dezvolta reflexele ce pot fi folositoare și în viața reală
