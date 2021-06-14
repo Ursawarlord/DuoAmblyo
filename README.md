@@ -32,3 +32,6 @@
 ## Automated tests
 
 **Continuous integration workflows**: verifică dacă proiectul Android se construiește cu succes cu gradle 4.1 la fiecare commit
+
+![image](https://user-images.githubusercontent.com/19687103/121850763-ec649280-ccf5-11eb-879e-bae908848abb.png)
+
