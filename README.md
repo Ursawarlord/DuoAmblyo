@@ -29,8 +29,12 @@
 
 ## UML
 
-![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml.png)
+![image](https://raw.githubusercontent.com/Ursawarlord/DuoCycle/main/uml/uml_3.png)
 
 ## Automated tests
 
 **Continuous integration workflows**: verifică dacă proiectul Android se construiește cu succes cu gradle 4.1 la fiecare commit
+
+## Bug reporting
+
+Am observat că unele emulatoare precum BlueStacks nu primesc aplcații care nu au conexiune cu Google Play de aceea am folosit branch-ul /ads pentru a păstra această oportunitate aplicației DuoCycle
